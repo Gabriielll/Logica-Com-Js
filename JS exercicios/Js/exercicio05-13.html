@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios 5 a 13</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        h1 {
+            color: rgb(51, 51, 51);
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: purple;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #8c6cff;
+        }
+
+        #oi {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercícios 5 a 13</h1>
+
+    <script>
+        function exercicio5() {
+            let numero = Number(prompt("Digite um número:"));
+            let antecessor = numero - 1;
+            alert(`O antecessor do número ${numero} é ${antecessor}`);
+        }
+
+        function exercicio6() {
+            let base = Number(prompt("Digite o valor para a base do triângulo:"));
+            let altura = Number(prompt("Digite o valor para a altura do triângulo:"));
+            let area = (base * altura) / 2;
+
+            alert(`O valor da área do triângulo é ${area}`);
+        }
+
+        function exercicio7() {
+            let anos = Number(prompt("Digite quantos anos você tem:"));
+            let meses = Number(prompt("Digite quantos meses se passaram desde seu aniversário:"));
+            let dias = Number(prompt("Digite quantos dias se passaram desde seu último mesversário:"));
+
+            anos = anos * 365;
+            meses = meses * 30;
+            let idade = anos + meses + dias;
+
+            alert(`A sua idade expressa em dias é: ${idade}`);
+        }
+
+        function exercicio8() {
+            let votos = Number(prompt("Digite o total de pessoas que votaram:"));
+            let branco = Number(prompt("Digite a quantidade de pessoas que votaram em branco:"));
+            let nulo = Number(prompt("Digite a quantidade de pessoas que votaram nulo:"));
+
+            let valido = (votos - (nulo + branco)) / votos * 100;
+            nulo = (nulo / votos) * 100;
+            branco = (branco / votos) * 100;
+
+            alert(`A porcentagem de votos nulos: ${nulo}%`);
+            alert(`A porcentagem de votos brancos: ${branco}%`);
+            alert(`A porcentagem de votos válidos: ${valido}%`);
+        }
+
+        function exercicio9() {
+            let salarioAtual = Number(prompt("Digite seu salário mensal atual"));
+            let reajuste = Number(prompt("Digite o percentual de reajuste"));
+
+            let salarioNovo = salarioAtual - (-reajuste * salarioAtual) / 100;
+
+            alert(`O salário com reajuste de ${reajuste}%: ${salarioNovo}`);
+        }
+
+        function exercicio10() {
+            let precoDeFabrica = Number(prompt("Digite o preço do carro de fábrica"));
+
+            let final = (73 / 100 * precoDeFabrica) + precoDeFabrica;
+
+            alert(`O preço do carro para o consumidor será: ${final}`);
+        }
+
+        function exercicio11() {
+            let carrosVendidos = Number(prompt("Digite o número de carros vendidos pelo vendedor"));
+            let totalVendas = Number(prompt("Digite o valor total das vendas efetuadas"));
+            let salarioFixo = Number(prompt("Digite o salário fixo do vendedor"));
+            let comissao = Number(prompt("Digite o valor que o vendedor recebe por carro vendido"));
+
+            let salario = salarioFixo + (carrosVendidos * comissao) + (totalVendas * 5) / 100;
+
+            alert(`O salário final do vendedor será: ${salario}`);
+        }
+
+        function exercicio12() {
+            let Fahrenheit = parseFloat(prompt("Digite a temperatura em Fahrenheit:"));
+            let celsius = (Fahrenheit - 32) * (5 / 9);
+
+            alert(`${Fahrenheit} graus Fahrenheit = ${celsius} graus Celsius`);
+        }
+
+        function exercicio13() {
+            let nota1 = Number(prompt("Digite o valor da primeira nota:"));
+            let nota2 = Number(prompt("Digite o valor da segunda nota:"));
+            let nota3 = Number(prompt("Digite o valor da terceira nota:"));
+
+            let mediaPonderada = ((nota1 * 2) + (nota2 * 3) + (nota3 * 5)) / 10;
+
+            alert(`A média ponderada das notas é: ${mediaPonderada}`);
+        }
+    </script>
+
+    <button type="button" onclick="exercicio5()">Exercício 5</button>
+    <button type="button" onclick="exercicio6()">Exercício 6</button>
+    <button type="button" onclick="exercicio7()">Exercício 7</button>
+    <button type="button" onclick="exercicio8()">Exercício 8</button>
+    <button type="button" onclick="exercicio9()">Exercício 9</button>
+    <button type="button" onclick="exercicio10()">Exercício 10</button>
+    <button type="button" onclick="exercicio11()">Exercício 11</button>
+    <button type="button" onclick="exercicio12()">Exercício 12</button>
+    <button type="button" onclick="exercicio13()">Exercício 13</button>
+
+</body>
+</html>
